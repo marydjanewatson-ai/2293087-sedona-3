@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Мария Масалович](https://up.htmlacademy.ru/htmlcss-individual/3/user/2293087).
-* Наставник: [Екатерина Комнатная]{https://htmlacademy.ru/profile/id215761}.
+* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 * Сайт[Мой проект Седона](https://marydjanewatson-ai.github.io/2293087-sedona-3/)
 
 ---
