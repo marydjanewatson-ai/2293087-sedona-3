@@ -8,32 +8,32 @@
   </head>
 
   <body>
-    <div class="background">
-      <header class="page-header">
-        <a href="/"><img class="page-header-logo" src="images/logo/logo-sedona.svg" width="138" height="64"
+    <div class="container">
+     <header class="page-header">
+        <a href="index.html"><img class="page-header-logo" src="images/logo/logo-sedona.svg" width="138" height="70"
             alt="Логотип городка Седона в Аризоне"></a>
         <nav class="navigation">
-          <ul class="navigation-list">
+          <ul class="all-list navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link current" href="index.html">Главная</a>
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link current" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-user">
+          <ul class="all-list navigation-user">
             <li class="navigation-item-search">
-              <a class="navigation-link-search" href="#">
+              <a class="navigation-link-search option-search" href="#">
                 <span class="visually-hidden">
                   Поиск
                 </span>
               </a>
             </li>
             <li class="navigation-item-favorites">
-              <a class="navigation-link-favorites" href="#">
+              <a class="navigation-link-favorites option-search" href="#">
                 <span class="favorite-number">12</span>
                 <span class="visually-hidden">
                   Избранное
@@ -47,7 +47,7 @@
       <main class="main-inner">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <ul class="breadcrumbs">
+          <ul class="all-list breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link-main" href="index.html">
                 <span class="visually-hidden">
@@ -65,7 +65,7 @@
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура</legend>
-                <ul class="catalog-filter-list">
+                <ul class="all-list catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-input" type="checkbox" name="swimming-pool" checked>
@@ -89,7 +89,7 @@
 
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Тип жилья</legend>
-                <ul class="catalog-filter-list">
+                <ul class="all-list catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
                       <input class="control-input" type="radio" name="product-group" value="hotel" checked>
@@ -112,6 +112,21 @@
               </fieldset>
             </form>
             </div>
+            <div class="form-price">
+              <h2 class="catalog-filter-title">Стоимость,₽:</h2>
+            <form class="catalog-price" action="https://echo.htmlacademy.ru/" method="get">
+               <div class="price-filter">
+                <lable class="price-input">
+                  <input class="input input-left" type="number"  value="0" min="0">
+                  <span>от</span>
+                </lable>
+                <label>
+                  <input class="input input-right" type="number" value="9000" min="0">
+                  <span>до</span>
+                </label>
+              </div>
+            </form>
+            </div>
               <div class="actions">
               <button class="button" type="submit">Применить</button>
               <button class="button-reset" type="reset">Сбросить</button>
@@ -131,20 +146,20 @@
             <option value="popular">Сначала популярное</option>
           </select>
           <div class="options-icon">
-          <a href="#" class="button-light">
+          <a href="#" class="button-light icon-catalog">
             <span class="visually-hidden">Показать карточки</span>
           </a>
-          <a class="button-laptop" href="#">
+          <a class="button-laptop icon-catalog" href="#">
             <span class="visually-hidden">Показать на весь экран</span>
           </a>
-          <a class="button-list" href="#">
+          <a class="button-list icon-catalog" href="#">
             <span class="visually-hidden">Показать список</span>
           </a>
           </div>
         </section>
         <section class="catalog-card">
           <h2 class="visually-hidden">Отели</h2>
-          <ul class="product-card-list">
+          <ul class="all-list product-card-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212"
@@ -222,7 +237,7 @@
               </div>
             </li>
           </ul>
-          <ul class="pagination">
+          <ul class="all-list pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-current">1</a>
             </li>
@@ -259,34 +274,34 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+       <footer class="page-footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="social-list">
+          <ul class="all-list social-list">
             <li class="social-item">
-              <a class="social-vk item" href="https://vk.com/htmlacademy">
+              <a class="social-vk social-link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Vkontakte</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-tg item" href="https://t.me/htmlacademy">
+              <a class="social-tg social-link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Telegram</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-youtube item" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social-youtube social-link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
           </ul>
-          <ul class="number">
+          <ul class="all-list number">
             <li>
               <a class="footer-contacts-address-phone" href="tel:+7812812112">+7 (812) 812-12-12</a>
             </li>
           </ul>
           <section class="logo">
             <h3 class="visually-hidden">Лого школы</h3>
-            <a href="https://htmlacademy.ru"><img class="footer-school-logo" src="images/logo/logo-htmlacademy.svg"
+            <a class="school-logo" href="https://htmlacademy.ru"><img class="footer-school-logo" src="images/logo/logo-htmlacademy.svg"
                 width="115" height="33" alt="Логотип HTML ACADEMY"></a>
           </section>
         </section>
