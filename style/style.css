@@ -46,7 +46,7 @@ body {
   line-height: 21px;
   color: #333;
   background-color: #f2f2f2;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
 
   }
@@ -56,15 +56,16 @@ body {
 .page-header {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.page-header-logo {
+.logotype {
   position: absolute;
   top:0;
-  padding-left: 70px;
-  padding-right: 30px;
+  left: 70px;
   z-index: 1;
 }
+
 /* Навигация */
 
 .navigation {
@@ -73,7 +74,7 @@ body {
 
 .navigation-item{
   text-decoration: none;
-  padding-left: 10px;
+  padding: 0 16px;
 }
 
 .navigation-list {
@@ -92,7 +93,7 @@ body {
 .navigation-link {
   display: block;
   box-sizing: border-box;
-  padding-top: 20px;
+  padding-top: 19px;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 24px;
@@ -100,7 +101,7 @@ body {
   font-weight: 700;
   text-align: center;
   background-color: #ffffff;
-  height: 64px;
+  padding-bottom: 19px
   }
 
 .current {
@@ -110,15 +111,7 @@ body {
 
 
 .navigation-button {
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 4px;
   background-color: #756157;
-  color: #ffffff;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
   padding-top: 8px;
   padding-bottom: 8px;
   width: 160px;
@@ -233,35 +226,13 @@ body {
 
 .advantages-item {
   padding: 102px 85px;
-  width: 400px;
+  width: 230px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
 
 .advantages-item-main {
   display: flex;
-
-}
-
-.advantages-title-main {
-  text-transform: uppercase;
-  position: relative;
-  margin-bottom: 60px;
-  color: rgba(255, 255, 255, 1);
-  font-size: 24px;
-  line-height: 28px;
-  margin-top:0;
-
-}
-
-.advantages-title-main::after {
-  width: 60px;
-  height: 2px;
-  bottom: -30px;
-  left: 85px;
-  content: "";
-  background-color: rgba(255, 255, 255, 0.3);
-  position: absolute;
 }
 
 .text-content {
@@ -272,29 +243,55 @@ body {
   box-sizing: border-box;
 }
 
-.advantages-text {
+.advantages-title-main {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  line-height: 28px;
+  margin-top:0;
+  padding-bottom: 30px;
 
-  width: 1200px;
-  display: flex;
 }
+
+.advantages-title-main::after {
+  width: 60px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 .advantages-title {
   text-transform: uppercase;
   position: relative;
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   color: rgba(0, 0, 0, 1);
   font-family: "PT Sans", sans-serif;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
+  padding-bottom: 30px;
  }
 
 .advantages-title::after {
   width: 60px;
   height: 2px;
-  bottom: -30px;
-  left: 85px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   content: "";
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
@@ -320,7 +317,7 @@ body {
   /*services*/
 
 .services-item {
-  width: 401px;
+  width: 400px;
   text-align: center;
   box-sizing: border-box;
   padding: 75px;
@@ -337,6 +334,7 @@ body {
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
 }
 
 
@@ -349,6 +347,7 @@ body {
   padding-top: 103px;
   margin: 0 0 30px;
   position: relative;
+  color: #000;
   }
 
   .services-title::before {
@@ -492,15 +491,9 @@ body {
 
 .newsletter-button {
   padding: 0 20px;
-  border: 1px solid #82b3d3;
   background-color: rgba(130, 179, 211, 1);
-  color: #fff;
-  border-radius: 0 4px 4px 0;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  box-sizing: border-box;
-  text-transform: uppercase;
+  width: 232px;
 
 }
 /* footer*/
@@ -569,9 +562,9 @@ body {
   /* header*/
 
   .inner-header {
-  width: 1200px;
-  height: 412px;
-  background-image: url("../images/blur/back-filter.jpg")
+  background-image: url("../images/blur/back-filter.jpg");
+  background-size: cover;
+  padding: 50px 70px 50px 70px;
 }
 
 .inner-header-title {
@@ -580,18 +573,13 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  padding-top: 35px;
-  padding-left: 70px;
   margin: 0;
 }
 
 .breadcrumbs {
   color:#fff;
   display: flex;
-  }
-
-ul.breadcrumbs{
-  padding-left: 70px;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-link-main {
@@ -660,15 +648,29 @@ ul.breadcrumbs{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 40px 70px 50px 70px;
+  padding-top: 39px;
 }
 
 .button {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border-width: 0;
+  border: none;
+}
+
+.button-on {
+  background-color: #7dB54f;
+  width: 140px;
+}
+
+.button-go {
   background-color: #82b3d3;
   width: 191px;
   height: 36px;
@@ -677,11 +679,6 @@ ul.breadcrumbs{
 }
 
 .button-reset {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #fff;
   background-color: rgba(0, 0, 0, 0);
   width: 191px;
   height: 36px;
@@ -690,7 +687,8 @@ ul.breadcrumbs{
 
 .price-filter {
   display: flex;
-  gap: 8px;
+  gap: 2px;
+  align-items: flex-start;
 }
 
 .form-price {
@@ -698,23 +696,35 @@ ul.breadcrumbs{
   align-self: flex-start;
 }
 
+.price-input {
+  position: relative;
+}
 
-.input-left {
+.for-to {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+.input {
   width: 140px;
   height: 48px;
+  padding: 0 0 0 20px;
+  border: none;
+  font-family: "PT Sans",sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+
+}
+.input-left {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  padding: 0;
-  border: none;
 }
 
 .input-right {
-  width: 140px;
-  height: 48px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  padding: 0;
-  border: none;
 }
 
 
@@ -789,20 +799,17 @@ ul.breadcrumbs{
 
 
 .catalog-card {
-  width: 1200px;
+  padding: 0 70px 40px;
 }
 
 .product-card-list {
   text-align: center;
-  width: 1060px;
-  height: 896px;
-  margin-left: 70px;
-  margin-right: 70px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 16px;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 40px;
+
 
 
 }
@@ -829,6 +836,7 @@ ul.breadcrumbs{
   font-size: 24px;
   line-height: 28px;
   text-align: left;
+  color: #000;
 }
 
 .description-sum {
@@ -850,19 +858,13 @@ ul.breadcrumbs{
 
 .product-card-button {
   width: 140px;
+  background-color: #82b3d3;
+
 }
 
 .option {
-  display: block;
   width: 140px;
   background-color: #756157;
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
   padding: 8px 0;
 }
 
@@ -896,14 +898,10 @@ ul.breadcrumbs{
 /*pagination*/
 
 .pagination {
-  width: 400px;
-  height: 60px;
   display: flex;
-  margin-left: 70px;
-  margin-top: 80px;
+  margin-top: 40px;
   box-sizing: border-box;
-  justify-content: space-between;
-  position: relative;
+  gap: 8px;
 }
 
 .pagination-link {
