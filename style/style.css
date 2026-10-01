@@ -67,6 +67,20 @@ body {
 }
 
 /* Навигация */
+.button {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border-width: 0;
+  border: none;
+  cursor: pointer;
+}
 
 .navigation {
   display: flex;
@@ -394,19 +408,6 @@ body {
   text-align: center;
 }
 
-.search {
-  width: 376px;
-  background-color: #756157;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-family: "PT Sans",sans-serif;
-  text-transform: uppercase;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
-}
-
 
 /*subscribe*/
 
@@ -420,12 +421,7 @@ body {
 }
 
 .subscribe-catalog {
-  box-sizing: border-box;
-  width: 1200px;
-  height: 414.86px;
-  text-align: center;
-  padding-top: 96px;
-  padding-bottom: 104px;
+  background-image: none;
 }
 
 .subscribe-title {
@@ -438,21 +434,7 @@ body {
 }
 
 .subscribe-title-catalog {
-  font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
   color: #000;
-  font-size: 30px;
-  font-weight: 700px;
-  font-style: bold;
-  line-height: 36px;
-  justify-content: center;
-}
-
-.subscribe-description-catalog {
-  font-family: "PT Sans", sans-serif;
-  color: #333;
-  font-size: 22px;
-  line-height: 26px;
 }
 
 .subscribe-description{
@@ -463,6 +445,9 @@ body {
   margin: 0 0 30px;
 }
 
+.subscribe-description-catalog {
+  color: #333;
+}
 .form {
   display: flex;
   justify-content: center;
@@ -494,6 +479,8 @@ body {
   background-color: rgba(130, 179, 211, 1);
   cursor: pointer;
   width: 232px;
+  font-size: 20px;
+  line-height: 36px;
 
 }
 /* footer*/
@@ -651,23 +638,22 @@ body {
   padding-top: 39px;
 }
 
-.button {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border-width: 0;
-  border: none;
+.search {
+  width: 376px;
+  background-color: #756157;
+  font-size: 20px;
+  line-height: 36px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .button-on {
   background-color: #7dB54f;
   width: 140px;
+}
+
+.button-on:hover{
+  background-color: #6c9e42;
 }
 
 .button-go {
@@ -678,11 +664,33 @@ body {
   border-width: 0;
 }
 
+.button-go:hover,
+.product-card-button:hover,
+.newsletter-button:hover {
+ background-color: #68a2ca;
+}
+
+.button-go:active,
+.product-card-button:active,
+.button-on:active,
+.navigation-button:active,
+.button-reset:active,
+.newsletter-button:active,
+.search:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 .button-reset {
   background-color: rgba(0, 0, 0, 0);
   width: 191px;
   height: 36px;
   border: none;
+  color:#fff;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 .price-filter {
@@ -694,6 +702,56 @@ body {
 .form-price {
   width: 288px;
   align-self: flex-start;
+}
+
+.range {
+  position: relative;
+  width: 282px;
+  height: 20px;
+  margin-top: 30px;
+}
+
+.range-scale {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #8e8e8e;
+}
+
+/* Белая активная часть между бегунками */
+.range-scale::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 4px;
+  background-color: #ffffff;
+  content: "";
+}
+
+/* Общие свойства бегунков */
+.range-toggle {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Левый бегунок */
+.toggle-min {
+  left: 0;
+}
+
+/* Правый бегунок */
+.toggle-max {
+  left: 75%;
 }
 
 .price-input {
@@ -715,8 +773,16 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 1);
-
+  box-sizing: border-box;
 }
+
+  .input::-webkit-inner-spin-button,
+  .input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+    margin:0;
+  }
+
+
 .input-left {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -747,17 +813,6 @@ body {
 
 }
 
-.select-control {
-  width: 292px;
-  border: 2px solid #e5e5e5;
-  border-radius: 4px;
-  padding: 14px 80px 14px 20px;
-  margin-left: 200PX;
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: #333;
-}
 
 .button-light::before {
   background-image: url("../images/icon/tile.svg");
@@ -868,6 +923,12 @@ body {
   padding: 8px 0;
 }
 
+.option:hover,
+.navigation-button:hover,
+.search:hover {
+  background-color: #615048;
+}
+
 .options-card {
   display: flex;
   width: 300px;
@@ -927,4 +988,111 @@ body {
 .dots {
   background-color: #fff;
   color: #000;
+}
+.raiting-star {
+  background-image: url("../images/star.svg");
+  width: 140px;
+  height: 18px;
+  background-repeat: space;
+  margin-top:25px;
+}
+.star-4 {
+  width: 88px;
+}
+.star-3 {
+  width: 68px;
+}
+
+.star-2 {
+  width: 42px;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 292px;
+  margin-left: 200PX;
+}
+
+.select-wrapper:hover{
+  border: 2px solid #68a2Ca;
+  border-radius: 4px;
+}
+
+.select-wrapper:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+.select-wrapper::after{
+  content: "";
+  position: absolute;
+  top:50%;
+  right: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 12px;
+  height: 8px;
+  background-image: url("../images/icon/vector.svg");
+}
+
+.select-wrapper select{
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  font-size: 18px;
+  line-height: 21px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  font-family: "PT Sans", sans-serif;
+  color: #333;
+
+}
+
+.catalog-filter-item-checkbox,
+.catalog-filter-item-radio{
+  margin-top: 5px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-label,
+.radio-label {
+  margin-bottom: 10px;
+}
+
+.checkbox-input,
+.radio-input {
+  width: 25px;
+  height: 17px;
+  margin:0;
+}
+
+.radio-input {
+  margin:0;
+}
+
+.checkbox-input::after,
+.radio-input::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon/checkbox.empty.svg");
+  background-repeat: no-repeat;
+}
+
+.radio-input::after {
+  background-image: url("../images/icon/ellipse.empty.svg");
+}
+
+.check::after {
+  background-image: url("../images/icon/checkbox.svg");
+}
+.check-radio::after{
+  background-image: url("../images/icon/radio.svg");
 }
