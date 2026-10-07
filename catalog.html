@@ -69,13 +69,13 @@
                   <ul class="all-list catalog-filter-list">
                     <li class="catalog-filter-item-checkbox">
                       <label class="checkbox-label">
-                        <input class="checkbox-input check" type="checkbox" name="swimming-pool" checked>
+                        <input class="checkbox-input" type="checkbox" name="swimming-pool" checked>
                         Бассейн
                       </label>
                     </li>
                     <li class="catalog-filter-item-checkbox">
                       <label class="checkbox-label">
-                        <input class="checkbox-input check" type="checkbox" name="parking" checked>
+                        <input class="checkbox-input" type="checkbox" name="parking" checked>
                         Парковка
                       </label>
                     </li>
@@ -89,12 +89,12 @@
                 </fieldset>
 
                 <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title">Тип жилья</legend>
+                  <legend class="catalog-filter-title live">Тип Жилья</legend>
                   <ul class="all-list catalog-filter-list">
                     <li class="catalog-filter-item-radio">
                       <label class="radio-label">
-                        <input class="radio-input check-radio" type="radio" name="product-group" value="hotel" checked>
-                        Гостиницы
+                        <input class="radio-input" type="radio" name="product-group" value="hotel" checked>
+                        Гостиница
                       </label>
                     </li>
                     <li class="catalog-filter-item-radio">
@@ -114,13 +114,13 @@
               </form>
             </div>
             <div class="form-price">
-              <h2 class="catalog-filter-title">Стоимость,₽:</h2>
+              <h2 class="catalog-filter-title price">Стоимость, ₽:</h2>
               <form class="catalog-price" action="https://echo.htmlacademy.ru/" method="get">
                 <div class="price-filter">
-                  <lable class="price-input">
+                  <label class="price-input">
                     <input class="input input-left" type="number" value="0" min="0">
                     <span class="for-to">от</span>
-                  </lable>
+                  </label>
                   <label class="price-input">
                     <input class="input input-right" type="number" value="9000" min="0">
                     <span class="for-to">до</span>
@@ -153,14 +153,14 @@
             Найдено гостиниц: 38
           </div>
           <div class="select-wrapper">
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешёвое</option>
+            <select class="select-control disabled" aria-label="Сортировка">
+              <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогое</option>
               <option value="popular">Сначала популярное</option>
             </select>
           </div>
           <div class="options-icon">
-            <a href="#" class="button-light icon-catalog">
+            <a href="#" class="button-light icon-catalog icon-catalog-current">
               <span class="visually-hidden">Показать карточки</span>
             </a>
             <a class="button-laptop icon-catalog" href="#">
@@ -176,8 +176,7 @@
           <ul class="all-list product-card-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212"
-                  alt="звёздное небо сквозь горы">
+                <img class="product-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="звёздное небо сквозь горы">
                 <h3 class="product-card-title">Amara Resort & Spa</h3>
               </a>
               <div class="description-sum">
@@ -186,7 +185,7 @@
               </div>
               <div class="options-card">
                 <a class="product-card-button option button" href="#">Подробнее</a>
-                <button class="product-card-button button" href="#">В Избранное</button>
+                <button class="product-card-button button">В Избранное</button>
               </div>
               <div class="figure">
                 <p class="raiting-star star-4">
@@ -207,7 +206,7 @@
               </div>
               <div class="options-card">
                 <a class="product-card-button option button" href="#">Подробнее</a>
-                <button class="button button-on" href="#">В Избранное</button>
+                <button class="button button-on" href="#">В Избранном</button>
               </div>
               <div class="figure">
                 <p class="raiting-star star-4">
@@ -232,8 +231,7 @@
               </div>
               <div class="figure">
                 <p class="raiting-star star-3">
-                  <span class="visually-hidden">
-                    <span class="visually-hidden">Звезда</span>
+                 <span class="visually-hidden">Звезда</span>
                 </p>
                 <p class="raiting">Рейтинг: 6,9</p>
               </div>
@@ -298,22 +296,28 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+     <footer class="page-footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="all-list social-list">
             <li class="social-item">
               <a class="social-vk social-link" href="https://vk.com/htmlacademy">
+                <svg class="social" xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" viewBox="0 0 48 40"><path  fill-rule="evenodd" d="M35.1 14q.4-1-.8-1h-2.6q-1 0-1.1.7S29.2 17 27.3 19q-.8.9-1.2.8t-.4-.7v-5.2q0-.9-.8-.9h-4q-.8 0-.8.6c0 .6 1 .8 1 2.5V20q.1 1.1-.4 1c-.9 0-3-3.2-4.3-6.9q-.3-1-1.2-1h-2.6q-1.1 0-1 .7c0 .7 1 4.1 4.2 8.6 2.2 3 5.2 4.7 8 4.7 1.7 0 1.9-.4 1.9-1v-2.3q0-1 .7-.9c.4 0 1 .2 2.6 1.7 1.8 1.7 2 2.5 3 2.5h2.7q1.1 0 1-1.1-.5-1.1-2.3-3L31.6 21q-.5-.6 0-1.1s3.2-4.4 3.5-6" clip-rule="evenodd"/>
+                </svg>
                 <span class="visually-hidden">Vkontakte</span>
               </a>
             </li>
             <li class="social-item">
               <a class="social-tg social-link" href="https://t.me/htmlacademy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" viewBox="0 0 48 40"><path  d="m31.5 12.1-16 6.1q-1.5.8-.2 1.4l4.1 1.2 9.5-6q.8-.2.5.2l-7.7 7-.3 4.2q.6 0 .9-.4l2-2 4 3q1.3.8 1.6-.6l2.7-12.8c.3-1.1-.4-1.6-1.1-1.3"/>
+                </svg>
                 <span class="visually-hidden">Telegram</span>
               </a>
             </li>
             <li class="social-item">
               <a class="social-youtube social-link" href="https://www.youtube.com/user/htmlacademyru">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" viewBox="0 0 48 40"><path  d="M31.3 11.5H15.8c-1.8 0-3.1 1.6-3.1 3.4v10c0 2 1.3 3.6 3.1 3.6h15.7c1.6 0 3.2-1.6 3.2-3.4V14.9c-.3-1.8-1.6-3.4-3.4-3.4M20.3 24v-8l7.4 4z"/>
+                </svg>
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
@@ -325,8 +329,10 @@
           </ul>
           <section class="logo">
             <h3 class="visually-hidden">Лого школы</h3>
-            <a class="school-logo" href="https://htmlacademy.ru"><img class="footer-school-logo"
-                src="images/logo/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTML ACADEMY"></a>
+            <a class="school-logo" href="https://htmlacademy.ru">
+              <svg  xmlns="http://www.w3.org/2000/svg" width="115" height="33" fill="currentColor" viewBox="0 0 115 33"><g  clip-path="url(#a)"><path d="M0 12.9v2.6h2.5v-2.6zM11.6 4.5Q9.2 4.6 8 6.2h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9M26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6q0 2.6 2.7 2.7h4.1v-2h-3.7q-1 0-1.1-1.1V6.8h4.8zM41.1 4.6q-2.5 0-3.5 2.1h-.1a4 4 0 0 0-3.4-2.1Q32 4.8 31 6.4h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5q2.3.1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3q2.3.1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3M47.8 12.7q0 2.6 2.8 2.7h2v-2h-1.7q-1 0-1.1-1.1V0h-2zM28.9 19.7a5 5 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6q2.7-.1 3.8-1.9h.1v1.6h2V18.2h-2zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6M44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6q2.5.2 3.3 2.2h2.1zM55.1 19.7a5 5 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6q2.7-.1 3.8-1.9h.1v1.6h2V18.2h-2zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6M68.7 19.8a5 5 0 0 0-3.9-1.9c-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6q2.6-.1 3.8-1.8h.1v1.5h2V13.4h-2zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6M78.3 17.9a5.4 5.4 0 0 0-5.5 5.6c0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1q-.8 1.6-3 1.6c-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3m0 1.9q2.7.1 3.3 2.6h-6.5a3 3 0 0 1 3.2-2.6M98.2 17.9a4 4 0 0 0-3.6 2h-.1q-1-1.9-3.4-2-2.2 0-3.1 1.8v-1.5h-1.9v10.6h2v-5.4q.1-3.2 2.6-3.5 2.3.1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3q2.3.1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4M109.4 27l-3.6-8.9h-2.2l4.8 11.6q-.3 1.3-1.7 1.2h-2.5v2h2.5q2.6 0 3.5-2.6l4.7-12.2h-2.1z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h115v33H0z"/></clipPath></defs>
+              </svg>
+            </a>
           </section>
         </section>
       </footer>
